@@ -38,17 +38,35 @@ public IActionResult AgregarCandidato(int idPartido)
 }
 
 
+[HttpPost]
 public IActionResult GuardarCandidato(Candidato can)
-{   
+{
+    BD.AgregarCandidato(can);
+
+    ViewBag.partido = BD.VerInfoPartido(can.IdPartido);
+    ViewBag.listaCandidatos = BD.ListarCandidatos(can.IdPartido);
+
     
-
-
+    return View("DetallePartido");
 }
 
 
-public IActionResult ()
-{   
+public IActionResult EliminarCandidato(int idCandidato, int idPartido)
+{
+    BD.EliminarCandidato(idCandidato);
+    ViewBag.partido = BD.VerInfoPartido(idPartido);
+    ViewBag.listaCandidatos = BD.ListarCandidatos(idPartido);
+    
+    return View("DetallePartido");
+}
+public IActionResult Elecciones()
+{
+    return View();
+}
 
+public IActionResult Creditos()
+{
+    return View();
 }
 
     public IActionResult Privacy()
