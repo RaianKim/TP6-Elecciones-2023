@@ -20,13 +20,13 @@ public static class BD
             db.Execute(sql, new{iidCandidato = idCandidato});
         }
     }
-    public static Partido VerInfoPartido(int idPartido)
+    public static List<Partido> VerInfoPartido(int idPartido)
     {
-        Partido partido = null;
-        string sql = "SELECT * FROM Partido WHERE IdParido = @iidPartido";
+        List<Partido> partido = new List<Partido>();
+        string sql = "SELECT * FROM Partido WHERE IdPartido = @iidPartido";
         using(SqlConnection db = new SqlConnection(ConnectionString))
         {
-            partido = db.QueryFirstOrDefault<Partido>(sql, new { iidPartido = idPartido});
+            partido = db.Query<Partido>(sql, new {iidPartido = idPartido}).ToList();
         }
         return partido;
     }

@@ -24,7 +24,7 @@ public IActionResult VerDetallePartido(int idPartido)
 {
     ViewBag.DatosPartido = BD.VerInfoPartido(idPartido);
     ViewBag.ListaCandidatos = BD.ListarCandidatos(idPartido);
-    return View("DetallePartido");
+    return View("VerDetallePartido");
 }
 public IActionResult VerDetalleCandidato(int idCandidato)
 {   

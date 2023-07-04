@@ -10,8 +10,6 @@
         <p>@item.Nombre</p>
         <a href="@item.SitioWeb">Pagina de @item.Nombre</a>
         <img src="/Imagenes/@item.Logo" alt="imagen-@item.Nombre">
-        <p>@item.FechaFundacion</p>
-        <p>@item.CantidadDiputados</p>
-        <p>@item.CantidadSenadores</p>
+        <a href='@Url.Action("VerDetallePartido", new {idPartido = item.IdPartido})'>Click aca para saber mas sobre el partido</a>
    }
 
