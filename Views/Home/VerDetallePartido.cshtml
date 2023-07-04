@@ -5,8 +5,8 @@
 <div class="text-center">
     <h1 class="display-4">Detalle partido</h1>
     <h2>@ViewBag.DatosPartido.Nombre</h2>
-    <h2>@ViewBag.DatosPartido.Logo</h2>
-    <h2>@ViewBag.DatosPartido.SitioWeb</h2>
+    <img src="/Imagenes/@ViewBag.DatosPartido.Logo" alt="">
+    <p><a href="@ViewBag.DatosPartido.SitioWeb">Pagina JXC</a></p>
     <h2>@ViewBag.DatosPartido.FechaFundacion</h2>
     <h2>@ViewBag.DatosPartido.CantidadDiputados</h2>
     <h2>@ViewBag.DatosPartido.CantidadSenadores</h2>
