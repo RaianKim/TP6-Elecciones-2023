@@ -53,7 +53,7 @@ public static class BD
     public static List<Candidato> ListarCandidatos(int idPartido)
     {
         List<Candidato> listarpartidos = new List<Candidato>();
-        string sql = "SELECT * FROM Partido WHERE IdPartido = @iidPartido";
+        string sql = "SELECT * FROM Candidato WHERE IdPartido = @iidPartido";
         using(SqlConnection db = new SqlConnection(ConnectionString))
         {
             

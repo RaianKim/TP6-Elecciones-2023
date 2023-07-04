@@ -11,7 +11,14 @@
     <h2>@ViewBag.DatosPartido.CantidadDiputados</h2>
     <h2>@ViewBag.DatosPartido.CantidadSenadores</h2>
     <h1 class="display-4"> Candidatos</h1>
-    <h2>@ViewBag.ListaCandidatos</h2>
+    @foreach (Candidato item in ViewBag.ListaCandidatos)
+    {
+    <p>@item.Apellido</p>
+    <p>@item.Nombre</p>    
+    <p>@item.FechaNacimiento</p>
+    <p>@item.Foto</p>
+    <p>@item.Postulacion</p>
+    }
 </div>
 
 
