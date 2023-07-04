@@ -18,7 +18,12 @@
     <p>@item.FechaNacimiento</p>
     <p>@item.Foto</p>
     <p>@item.Postulacion</p>
+<form action='@Url.Action("EliminarCandidato", new { idPartido = item.IdPartido, idCandidato = item.IdCandidato })' >
+  <button type="submit">Eliminar Candidato</button>
+</form>
     }
 </div>
 
-
+<form action='@Url.Action("AgregarCandidato", new { idPartido = @ViewBag.DatosPartido.IdPartido })' >
+  <button type="submit">Agregar Candidato</button>
+</form>
