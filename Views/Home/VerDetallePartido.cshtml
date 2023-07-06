@@ -18,7 +18,7 @@
     <p>@item.FechaNacimiento</p>
     <p>@item.Foto</p>
     <p>@item.Postulacion</p>
-    <a href='@Url.Action("EliminarCandidato", new { idPartido = item.IdPartido, idCandidato = item.IdCandidato })' ><input type="button" value="Eliminar Candidato"></input></a>
+    <a href='@Url.Action("EliminarCandidato", new { idPartido = item.IdPartido, idCandidato = item.IdCandidato })' ><input type="button" value="Eliminar Candidato"></input></a><br>
     }
     <a href='@Url.Action("AgregarCandidato", new { idPartido = @ViewBag.DatosPartido.IdPartido })'><input type="button" value="Agregar Candidato"></input></a>
 </div>

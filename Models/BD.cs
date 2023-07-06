@@ -6,10 +6,10 @@ public static class BD
     private static string ConnectionString = @"Server=localhost; DataBase=Elecciones2023; Trusted_Connection=True";
     public static void AgregarCandidato(Candidato can)
     {
-        string sql = "INSERT INTO Candidato(Apellido,Nombre,FechaNacimiento,Foto,Postulacion) VALUES (@apellido, @nombre, @fechanacimiento, @foto. @postulacion)";
+        string sql = "INSERT INTO Candidato(IdPartido,Apellido,Nombre,FechaNacimiento,Foto,Postulacion) VALUES (@idpartido, @apellido, @nombre, @fechanacimiento, @foto, @postulacion)";
         using(SqlConnection db = new SqlConnection(ConnectionString))
         {
-            db.Execute(sql, new{apellido = can.Apellido ,nombre = can.Nombre, fechaNacimiento = can.FechaNacimiento ,can.Foto, postulacion = can.Postulacion});
+            db.Execute(sql, new{idpartido=can.IdPartido, apellido = can.Apellido ,nombre = can.Nombre, fechaNacimiento = can.FechaNacimiento ,foto=can.Foto, postulacion = can.Postulacion});
         }
     }
     public static void EliminarCandidato(int idCandidato)

@@ -42,21 +42,17 @@ public IActionResult AgregarCandidato(int idPartido)
 public IActionResult GuardarCandidato(Candidato can)
 {
     BD.AgregarCandidato(can);
-
-    ViewBag.partido = BD.VerInfoPartido(can.IdPartido);
-    ViewBag.listaCandidatos = BD.ListarCandidatos(can.IdPartido);
-
-    
-    return View("DetallePartido");
+    ViewBag.DatosPartido = BD.VerInfoPartido(can.IdPartido);
+    ViewBag.ListaCandidatos = BD.ListarCandidatos(can.IdPartido);
+    return View("VerDetallePartido");
 }
 
 
 public IActionResult EliminarCandidato(int idCandidato, int idPartido)
 {
     BD.EliminarCandidato(idCandidato);
-    ViewBag.partido = BD.VerInfoPartido(idPartido);
-    ViewBag.listaCandidatos = BD.ListarCandidatos(idPartido);
-    
+    ViewBag.DatosPartido = BD.VerInfoPartido(idPartido);
+    ViewBag.ListaCandidatos = BD.ListarCandidatos(idPartido);
     return View("DetallePartido");
 }
 public IActionResult Elecciones()
