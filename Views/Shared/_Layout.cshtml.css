@@ -16,11 +16,20 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
-
+.nav-link
+{
+  vertical-align: middle;
+}
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+a .nav-link
+{
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;  
 }
 
 .border-top {

@@ -57,7 +57,7 @@ public IActionResult EliminarCandidato(int idCandidato, int idPartido)
 }
 public IActionResult Elecciones()
 {
-    return View();
+    return View("queSeVota");
 }
 
 public IActionResult Creditos()
