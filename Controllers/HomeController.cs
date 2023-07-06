@@ -53,7 +53,7 @@ public IActionResult EliminarCandidato(int idCandidato, int idPartido)
     BD.EliminarCandidato(idCandidato);
     ViewBag.DatosPartido = BD.VerInfoPartido(idPartido);
     ViewBag.ListaCandidatos = BD.ListarCandidatos(idPartido);
-    return View("DetallePartido");
+    return View("VerDetallePartido");
 }
 public IActionResult Elecciones()
 {
