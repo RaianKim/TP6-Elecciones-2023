@@ -20,3 +20,25 @@ html {
 body {
   margin-bottom: 60px;
 }
+.Partidos-B img
+{
+  max-width: 100px;
+}
+.Partidos-B
+{
+  border: 3px solid rgb(126, 187, 223);
+  border-radius: 10px;
+  padding: 50px;
+}
+.Partidos-B a
+{
+  text-decoration: none;
+  color: black;
+}
+.Patidos-A
+{
+  display: flex;
+  justify-content: space-around;
+  
+
+}

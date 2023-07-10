@@ -5,11 +5,18 @@
 <div class="text-center">
     <h1 class="display-4">Elecciones</h1>
 </div>
+   
+   <div class="Patidos-A">
    @foreach (Partido item in ViewBag.Partidos)
    {
+    <div class="Partidos-B">
         <p>@item.Nombre</p>
-        <a href="@item.SitioWeb">Pagina de @item.Nombre</a>
-        <img src="/Imagenes/@item.Logo" alt="imagen-@item.Nombre">
+        <p><a href="@item.SitioWeb">Pagina de @item.Nombre</a></p>
+        <img src="/Imagenes/@item.Logo" alt="imagen-@item.Nombre"><br>
         <a href='@Url.Action("VerDetallePartido", new {idPartido = item.IdPartido})'>Click aca para saber mas sobre el partido</a>
+    </div>
    }
+   </div>
+   
+   
 

@@ -33,7 +33,7 @@ public static class BD
     public static Candidato VerInfoCandidato(int idCandidato)
     {
         Candidato candidato = null;
-        string sql = "SELECT * FROM Partido WHERE IdParido = @iidPartido";
+        string sql = "SELECT * FROM Candidato WHERE IdCandidato = @iidcandidato";
         using(SqlConnection db = new SqlConnection(ConnectionString))
         {
             candidato = db.QueryFirstOrDefault<Candidato>(sql, new { iidcandidato = idCandidato});

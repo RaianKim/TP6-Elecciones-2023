@@ -29,7 +29,7 @@ public IActionResult VerDetallePartido(int idPartido)
 public IActionResult VerDetalleCandidato(int idCandidato)
 {   
     ViewBag.DatosCandidato = BD.VerInfoCandidato(idCandidato);
-    return View("DetalleCandidato");
+    return View("VerDetalleCandidato");
 }
 public IActionResult AgregarCandidato(int idPartido)
 {   
@@ -62,7 +62,7 @@ public IActionResult Elecciones()
 
 public IActionResult Creditos()
 {
-    return View();
+    return View("Creditos");
 }
 
     public IActionResult Privacy()

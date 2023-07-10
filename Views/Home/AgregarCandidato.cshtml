@@ -1,4 +1,6 @@
-/*Aca va el formulario[Esta en el HomeController como AgregarCandidato(int idCandidato)], ya lo estoy estoy llamando en los controllers*/
+@{
+    ViewData["Title"] = "Agregar Candidato";
+}
 <h1>Agregar nuevo candidato</h1>
 <form method="post" action='@Url.Action("GuardarCandidato")'>
   <input type="hidden" id="IdPartido" name="IdPartido" value=" @ViewBag.IdPartido"><br>
