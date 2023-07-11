@@ -5,21 +5,24 @@
 <div class="text-center">
     <h1 class="display-4">Detalle partido</h1>
     <h2>@ViewBag.DatosPartido.Nombre</h2>
-    <img src="/Imagenes/@ViewBag.DatosPartido.Logo" alt="">
+    <img id = "img1"src="/Imagenes/@ViewBag.DatosPartido.Logo" alt="">
     <p><a href="@ViewBag.DatosPartido.SitioWeb">Pagina JXC</a></p>
     <h2>@ViewBag.DatosPartido.FechaFundacion</h2>
     <h2>Cantidad de diputados: @ViewBag.DatosPartido.CantidadDiputados</h2>
     <h2>Cantodad de senadores: @ViewBag.DatosPartido.CantidadSenadores</h2>
     <h1 class="display-4"> Candidatos</h1>
+    <div class="CandidatoCuadro">
     @foreach (Candidato item in ViewBag.ListaCandidatos)
     {
-    <p>@item.Foto</p>
+    <div class="Candidatomod">
+    <img src="@item.Foto" alt="">
     <p>@item.Apellido</p>
     <p>@item.Nombre</p>    
     <a href='@Url.Action("EliminarCandidato", new { idPartido = item.IdPartido, idCandidato = item.IdCandidato })' ><input type="button" value="Eliminar Candidato"></input></a><br>
     <a href='@Url.Action("VerDetalleCandidato", new { idCandidato = item.IdCandidato})'><input type="button" value="Saber mas del candidato"></input></a>
+    </div>
     }
-    
+    </div>
     <a href='@Url.Action("AgregarCandidato", new { idPartido = @ViewBag.DatosPartido.IdPartido })'><input type="button" value="Agregar Candidato"></input></a>
 </div>
 

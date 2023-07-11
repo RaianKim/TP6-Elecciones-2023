@@ -12,7 +12,7 @@
     <div class="Partidos-B">
         <p>@item.Nombre</p>
         <p><a href="@item.SitioWeb">Pagina de @item.Nombre</a></p>
-        <img src="/Imagenes/@item.Logo" alt="imagen-@item.Nombre"><br>
+        <img id = "img1" src="/Imagenes/@item.Logo" alt="imagen-@item.Nombre"><br>
         <a href='@Url.Action("VerDetallePartido", new {idPartido = item.IdPartido})'>Click aca para saber mas sobre el partido</a>
     </div>
    }

@@ -22,13 +22,17 @@ body {
 }
 .Partidos-B img
 {
-  max-width: 100px;
+  max-width: 300px;
 }
 .Partidos-B
 {
   border: 3px solid rgb(126, 187, 223);
   border-radius: 10px;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 .Partidos-B a
 {
@@ -39,6 +43,25 @@ body {
 {
   display: flex;
   justify-content: space-around;
+}
+.Candidatomod
+{
+  border: 3px solid rgb(126, 187, 223);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: LEFT;
+  justify-content: center;
+  width:20%;
+}
+.Candidatomod img{
+  width: 100%;
+}
+#img1 {
+  width: 100%;
+}
+.CandidatoCuadro
+{
   
-
 }
