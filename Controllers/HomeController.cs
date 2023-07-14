@@ -44,7 +44,7 @@ public IActionResult GuardarCandidato(Candidato can)
     BD.AgregarCandidato(can);
     ViewBag.DatosPartido = BD.VerInfoPartido(can.IdPartido);
     ViewBag.ListaCandidatos = BD.ListarCandidatos(can.IdPartido);
-    return View("VerDetallePartido");
+    return RedirectToAction("VerDetallePartido",new {idPartido = can.IdPartido});
 }
 
 
