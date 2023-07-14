@@ -23,6 +23,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  vertical-align: middle;
 }
 .Partidos-B img
 {
@@ -66,7 +67,12 @@ body {
 {
   display: flex;
   justify-content: space-around;
-
+}
+.indexBody
+{
+  display: flex;
+  align-items: center;
+  height: 75vh;
 }
 .infoGeneral
 {
@@ -189,6 +195,12 @@ body {
   margin-top: 80px;
   border: 3px solid lightblue;
   border-radius: 7px;
+  height:75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:xx-large;
 }
 .colaboradores
 {
@@ -210,4 +222,10 @@ body {
 .colaborador img
 {
   width: 350px;
+}
+.colaboradoresBody
+{
+  display: flex;
+  align-items: center;
+  height: 17.5vh;
 }
